@@ -55,12 +55,9 @@ def plot_tracking(image, tlwhs, obj_ids, scores=None, frame_id=0, fps=0., ids2=N
 
     top_view = np.zeros([im_w, im_w, 3], dtype=np.uint8) + 255
 
-    #text_scale = max(1, image.shape[1] / 1600.)
-    #text_thickness = 2
-    #line_thickness = max(1, int(image.shape[1] / 500.))
     text_scale = 2
     text_thickness = 2
-    line_thickness = 3
+    line_thickness = 2
 
     radius = max(5, int(im_w/140.))
     cv2.putText(im, 'frame: %d fps: %.2f num: %d' % (frame_id, fps, len(tlwhs)),
